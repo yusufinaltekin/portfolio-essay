@@ -1,0 +1,51 @@
+@mixin f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin f-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin f-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin f-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin f-start {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+@mixin f-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin f-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin transition {
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+@mixin border {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
