@@ -277,7 +277,7 @@ ul {
       padding-top: 50px;
       position: absolute;
       top: 0px;
-      right: -800px;
+      right: 0px;
       background-color: #fff;
       @include transition;
       display: none;
@@ -291,7 +291,6 @@ ul {
     }
   }
   .active {
-    right: 0px !important;
     display: block !important;
   }
 
@@ -300,6 +299,7 @@ ul {
     @include f-column-start;
     flex-direction: column-reverse;
     align-items: center;
+    padding: 0px 30px;
     .description {
       text-align: center;
       width: 100%;
@@ -310,16 +310,31 @@ ul {
     }
   }
   .recent {
-    padding: 20px 60px;
+    width: 100%;
+    padding: 10px 50px;
     .recent-body {
+      width: 100%;
+      margin: auto;
+      @include f-column-start;
       .recent-card {
         width: 100%;
+        margin: 0px;
+        padding: 20px;
+        margin: 0px auto;
+        margin-bottom: 15px;
+        &:first-child {
+          margin-right: 0px;
+        }
+        &:last-child {
+          margin-left: 0px;
+        }
       }
     }
   }
   .featured {
     width: 100%;
     margin: 30px auto;
+    padding: 0px 40px;
     .featured-head {
       font-size: 2rem;
       margin-bottom: 20px;
@@ -339,7 +354,7 @@ ul {
           overflow: hidden;
         }
         .work-description {
-          padding: 20px 30px;
+          padding: 20px 10px;
           width: 100%;
           height: 100%;
           @include f-column-start;
@@ -357,7 +372,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and(min-width:577px) and (max-width: 768px) {
   .wrapper {
     width: 100%;
     @include f-column-start;
