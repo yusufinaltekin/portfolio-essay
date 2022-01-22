@@ -6,20 +6,14 @@ const sidebarClose = document.querySelector(".close");
 
 
 sidebar.addEventListener("click", () => {
-    nav.classList.add("active");
+
     sidebarClose.style.display = "block";
     sidebarClose.style.visibility = "inherit";
+    nav.classList.add("active");
     if (nav.classList == "active") {
         sidebar.style.display = "none";
         document.body.style.overflow = "hidden";
     }
-
-    // nav.classList.add("active");
-    // sidebarClose.classList.add("show")
-    // if(nav.classList=="active"){
-    //     sidebar.style.display="none";
-    //     document.body.style.overflow = "hidden";
-    // }
 })
 console.log(nav.style)
 

@@ -35,7 +35,7 @@ ul {
   display: none;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   z-index: 9999;
   visibility: hidden;
 }
@@ -351,56 +351,62 @@ ul {
   color: #fe0000;
 }
 
-@media screen and (max-width: 1050px) {
-  .wrapper {
-    width: 750px;
-  }
-  .wrapper .description {
-    width: 570px;
-  }
-  .wrapper .image {
-    width: 150px;
-    height: 150px;
+@media screen and (max-width: 576px) {
+  .sidebar {
+    display: block;
+    visibility: inherit;
   }
 
-  .recent {
-    padding: 20px;
+  .close {
+    right: 40px;
   }
-  .recent .recent-head {
-    padding: 0px 25px;
+
+  .nav {
+    width: 100vw;
+    height: 50px;
   }
-  .recent .recent-body {
+  .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
     width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    position: absolute;
+    top: 0px;
+    right: -800px;
+    background-color: #fff;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
   }
-  .recent .recent-body .recent-card {
-    width: 50%;
+  .nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav ul li:hover {
+    background-color: #8d8d8d;
   }
 
-  .featured {
-    width: 750px;
+  .active {
+    right: 0px !important;
   }
-  .featured .works .work .image {
-    width: 150px;
-  }
-  .featured .works .work .work-description {
-    width: 500px;
-    height: 100%;
-  }
-  .featured .works .work .work-description h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  .featured .works .work .work-description .work-details {
-    font-size: 1.6rem;
-  }
-  .featured .works .work .work-description .work-text {
-    line-height: 20px;
-    font-size: 1.4rem;
-  }
-}
-@media screen and (max-width: 800px) {
+
   .wrapper {
-    width: 500px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -416,145 +422,33 @@ ul {
             align-items: center;
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+    align-items: center;
   }
   .wrapper .description {
-    width: 570px;
     text-align: center;
+    width: 100%;
+    margin-right: 10px;
   }
   .wrapper .image {
-    width: 250px;
-    height: 250px;
     margin-bottom: 20px;
   }
 
-  .featured {
-    width: 600px;
-  }
-  .featured .works .work .image {
-    width: 150px;
-  }
-  .featured .works .work .work-description {
-    width: 400px;
-  }
-  .featured .works .work .work-description h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  .featured .works .work .work-description .work-details {
-    font-size: 1.6rem;
-  }
-  .featured .works .work .work-description .work-text {
-    line-height: 20px;
-    font-size: 1.4rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .sidebar {
-    display: block;
-    top: 15px;
-    right: 30px;
-    visibility: inherit;
-  }
-
-  .close {
-    top: 15px;
-    right: 50px;
-  }
-
-  .show {
-    display: block;
-  }
-
-  .nav {
-    z-index: 99;
-    width: 100vw;
-    height: 50px;
-  }
-  .nav ul {
-    position: absolute;
-    top: 0;
-    right: -800px;
-    padding-top: 50px;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 90;
-    margin-right: 0;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    transition: all 0.7s ease;
-    -webkit-transition: all 0.7s ease;
-    -moz-transition: all 0.7s ease;
-    -ms-transition: all 0.7s ease;
-    -o-transition: all 0.7s ease;
-  }
-  .nav ul li {
-    width: 100%;
-    padding-left: 50px;
-  }
-  .nav ul li:hover {
-    background-color: #7c7a7a;
-  }
-  .nav .active {
-    right: 0;
-    width: 100%;
-  }
-
-  .wrapper {
-    width: 100%;
-  }
-  .wrapper .description {
-    width: 100%;
-    padding: 20px;
-  }
-  .wrapper .image {
-    width: 250px;
-    height: 250px;
-  }
-
   .recent {
-    width: 100%;
-    padding: 10px 30px;
-  }
-  .recent .recent-body {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 20px 60px;
   }
   .recent .recent-body .recent-card {
     width: 100%;
   }
-  .recent .recent-body .recent-card:first-child {
-    margin: 10px;
-  }
-  .recent .recent-body .recent-card:last-child {
-    margin: 10px;
-  }
 
   .featured {
+    width: 100%;
+    margin: 30px auto;
+  }
+  .featured .featured-head {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .featured .works {
     width: 100%;
   }
   .featured .works .work {
@@ -571,24 +465,278 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #00a8cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    min-height: 220px;
   }
   .featured .works .work .image {
     width: 80%;
+    overflow: hidden;
   }
   .featured .works .work .work-description {
+    padding: 20px 30px;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .featured .works .work .work-description h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
   .featured .works .work .work-description .work-details {
     font-size: 1.6rem;
   }
-  .featured .works .work .work-description .work-text {
-    line-height: 20px;
-    font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .wrapper .description {
+    padding: 0px 20px;
+    text-align: center;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .recent {
+    padding: 20px 60px;
+  }
+  .recent .recent-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .recent .recent-body .recent-card {
+    width: 500px;
+    margin: 0px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  .recent .recent-body .recent-card:first-child {
+    margin-right: 0px;
+  }
+  .recent .recent-body .recent-card:last-child {
+    margin-left: 0px;
+  }
+
+  .featured {
+    width: 100%;
+    margin: 30px auto;
+    padding: 0px 30px;
+  }
+  .featured .featured-head {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .featured .works {
+    width: 100%;
+  }
+  .featured .works .work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #00a8cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    min-height: 220px;
+  }
+  .featured .works .work .image {
+    width: 100%;
+  }
+  .featured .works .work .work-description {
+    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .featured .works .work .work-description h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .featured .works .work .work-description .work-details {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 960px) {
+  .wrapper {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+  }
+  .wrapper .image {
+    width: 250px;
+  }
+  .wrapper .description {
+    padding: 0px 20px;
+    text-align: left;
+    width: 500px;
+    margin-right: 10px;
+  }
+
+  .recent {
+    padding: 20px 60px;
+  }
+  .recent .recent-body .recent-card {
+    width: 500px;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+  .recent .recent-body .recent-card:first-child {
+    margin-right: 10px;
+  }
+  .recent .recent-body .recent-card:last-child {
+    margin-left: 10px;
+  }
+
+  .featured {
+    width: 95%;
+    margin: 30px auto;
+    padding: 0px 30px;
+  }
+  .featured .featured-head {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .featured .works {
+    width: 100%;
+  }
+  .featured .works .work {
+    width: 100%;
+  }
+  .featured .works .work .image {
+    width: 50%;
+  }
+  .featured .works .work .work-description {
+    padding: 20px 30px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 961px) {
+  .wrapper {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+  }
+  .wrapper .image {
+    width: 250px;
+  }
+  .wrapper .description {
+    padding: 0px 20px;
+    text-align: left;
+    width: 500px;
+    margin-right: 10px;
+  }
+
+  .recent {
+    padding: 20px 60px;
+  }
+  .recent .recent-body .recent-card {
+    width: 500px;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+  .recent .recent-body .recent-card:first-child {
+    margin-right: 10px;
+  }
+  .recent .recent-body .recent-card:last-child {
+    margin-left: 10px;
+  }
+
+  .featured {
+    width: 95%;
+    margin: 30px auto;
+    padding: 0px 30px;
+  }
+  .featured .featured-head {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .featured .works {
+    width: 100%;
+  }
+  .featured .works .work {
+    width: 100%;
+  }
+  .featured .works .work .image {
+    width: 30%;
+  }
+  .featured .works .work .work-description {
+    width: 70%;
+    padding: 20px 30px;
+    height: 100%;
   }
 }
