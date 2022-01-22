@@ -280,6 +280,7 @@ ul {
       right: -800px;
       background-color: #fff;
       @include transition;
+      display: none;
       li {
         width: 100%;
         text-align: center;
@@ -291,6 +292,7 @@ ul {
   }
   .active {
     right: 0px !important;
+    display: block !important;
   }
 
   .wrapper {
@@ -537,7 +539,6 @@ ul {
           width: 70%;
           padding: 20px 30px;
           height: 100%;
-          
         }
       }
     }

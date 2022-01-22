@@ -392,6 +392,7 @@ ul {
     -moz-transition: all 0.7s ease;
     -ms-transition: all 0.7s ease;
     -o-transition: all 0.7s ease;
+    display: none;
   }
   .nav ul li {
     width: 100%;
@@ -403,6 +404,7 @@ ul {
 
   .active {
     right: 0px !important;
+    display: block !important;
   }
 
   .wrapper {
